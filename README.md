@@ -1,7 +1,9 @@
 
-# From Doodle to Code
+# Get practical knowledge & skills of Generative AI from doodles and code
 
-Learn the fundamentals of Generative AI and related technologies from doodles and apply the knowledge by coding. Each content comes with a video, cenceptual doodles, and hands-on projects to build a practical app with conversational AI. Optimize your knowledge and enhance your skills!
+Learn the fundamentals of Generative AI and related technologies from doodles and apply the knowledge by coding. Each content comes with a video, conceptual doodles, and hands-on projects to build a practical app with conversational AI. Optimize your knowledge and enhance your skills!
+
+![Doodle to Code teaser illustration](images/doodle-to-code.png)
 
 ## 🌱 Prerequisites
 
