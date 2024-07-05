@@ -54,4 +54,4 @@ TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
 
 **Congratulations**! You are running the Space AI Search that can now interact with users:
 
-
+![Space AI Search](./images/space-ai-search.gif)
