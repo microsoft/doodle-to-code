@@ -54,4 +54,4 @@ TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
 
 **Congratulations**! You are running the Space AI Search that can now interact with users:
 
-<img width="1351" alt="Space AI Search" src="https://github.com/aycabas/space-ai-search/assets/36196437/ebf46896-e315-4369-9968-c9417669f24b">
+
