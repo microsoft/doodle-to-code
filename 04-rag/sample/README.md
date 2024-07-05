@@ -2,10 +2,6 @@
 
 This template showcases the Space AI Search sample that responds to user questions like an AI assistant according to your space data from Azure AI Search. This enables your users to talk with the AI assistant in Teams to find information.
 
-Learn more about this sample by watching this Doodle to Code video:
-
-[![What is RAG](https://github.com/aycabas/space-ai-search/assets/36196437/2cbcce45-a93a-43af-842a-e43f30926508)](https://www.youtube.com/watch?v=1k4XGgsqfTM)
-
 The app template is built using the Teams AI library, which provides the capabilities to build AI-based Teams applications.
 
 ## Get started with the Space AI Search sample
