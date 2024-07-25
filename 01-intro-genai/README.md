@@ -28,6 +28,10 @@ For example, if you're working with a language model and you want it to generate
 
 Prompting is crucial because the quality of the output you get from an AI model is often directly related to the quality of the input you give it. Think of it as a sophisticated form of human-computer interaction where the computer understands and generates human language.
 
+## 🚀 Try it out on your own!
+
+**Now let's [try this](sample/README.md)!**
+
 ## 📺 Watch on YouTube
 
 Watch the video, **Generative AI and prompting 101** on YouTube:
