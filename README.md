@@ -9,6 +9,12 @@ Learn the fundamentals of Generative AI and related technologies from doodles an
 
 For coding exercises, it is recommended to use [Visual Studio Code](https://code.visualstudio.com/) for the best experience. 
 
+To use Azure AI Services, you generally need to have an [Azure account](https://azure.microsoft.com/free/), which allows you to access and manage various Azure services, including AI tools. 
+
+Additionally, some exercises use a bot on Microsoft Teams as an example. You can start developing on Teams and access the sandbox for free, but first you need to get:
+- A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with custom app upload permission
+- A [Microsoft 365 tenant](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)
+
 ## Topics
 
 Aside from the first topic, which covers the basics of generative AI, all other topics are standalone projects. You can start with any topic you like!
