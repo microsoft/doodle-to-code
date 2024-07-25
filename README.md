@@ -11,6 +11,8 @@ For coding exercises, it is recommended to use [Visual Studio Code](https://code
 
 ## Topics
 
+Aside from the first topic, which covers the basics of generative AI, all other topics are standalone projects. You can start with any topic you like!
+
 | # | Topics       | Descriptions |
 |---|--------------|--------------|
 | 01 | [Generative AI and Prompting 101](01-intro-genai/README.md)  | Explore the basic concepts of Large Language Model (LLM) such as GPT, and prompt engineering. Also learn how to use Azure OpenAI services. |
