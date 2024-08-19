@@ -25,4 +25,4 @@ Aside from the first topic, which covers the basics of generative AI, all other 
 | 02 | [Personalize AI chatbot using prompts](02-clippy/README.md) | Master the art of prompt engineering to build Clippy for Teams using Azure OpenAI and Teams AI Library. |
 | 03 | [OpenAI Assistants API](03-assistants-api/README.md) | Learn OpenAI Assistants API and build your own cooking advisor bot on Teams. |
 | 04 | [Intro to Retrieval-Augmented Generation (RAG)](04-rag/README.md)  | Import your custom data using Azure AI Search and build a RAG-based AI assistant in Python using Teams Toolkit. |
-| 05 | TBD | Coming soon! |
+| 05 | [Deploy to a Teams app using Azure OpenAI Studio](05-on-your-data/README.md) | Bring your AI app to Teams using Azure OpenAI Studio's 'Deploy to a Teams App' feature. |
