@@ -1,4 +1,4 @@
-# Bring your AI app to Microsoft Teams with Azure OpenAI Studio's new 'Deploy to a Teams App' feature
+# Bring your AI app to Teams with Azure OpenAI Studio's new 'Deploy to a Teams App' feature
 
 In this section, you'll learn about the practical smart bot development with Azure OpenAI On Your Data.
 
