@@ -44,6 +44,6 @@ So, whether you're looking to personalize your AI models with your own data or b
 
 Watch the video, **Bring Your AI App to Teams with Azure OpenAI Studio's New 'Deploy to a Teams App' Feature** on YouTube:
 
-[![YouTube: Bring Your AI App to Teams with Azure OpenAI Studio's New 'Deploy to a Teams App' Feature](https://img.youtube.com/vi/1k4XGgsqfTM/0.jpg)](https://www.youtube.com/watch?v=xAXlFGSH1II)
+[![YouTube: Bring Your AI App to Teams with Azure OpenAI Studio's New 'Deploy to a Teams App' Feature](https://github.com/user-attachments/assets/e3860b28-c3ab-46a1-875b-7df48ff3e17a)](https://www.youtube.com/watch?v=xAXlFGSH1II)
 
 [Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
