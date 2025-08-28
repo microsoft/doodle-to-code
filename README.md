@@ -1,7 +1,7 @@
 
 # Doodle to Code: A Practical guide to getting started with Generative AI
 
-Learn the fundamentals of Generative AI and related technologies from doodles and apply the knowledge by coding. Each content comes with a video, conceptual doodles, and hands-on projects to build a practical app with conversational AI. Optimize your knowledge and enhance your skills!
+Learn the fundamentals of Generative AI, agentic AI, agents, and related technologies from doodles and apply the knowledge by coding. Each content comes with a video, conceptual doodles, and hands-on projects to build a practical app with conversational AI. Optimize your knowledge and enhance your skills!
 
 ![Doodle to Code teaser illustration](images/doodle-to-code.png)
 
@@ -18,6 +18,15 @@ Additionally, some exercises use a bot on Microsoft Teams as an example. You can
 ## Topics
 
 Aside from the first topic, which covers the basics of generative AI, all other topics are standalone projects. You can start with any topic you like!
+
+### Season 2 - Agentic AI (2025)
+
+| # | Topics       | Descriptions |
+|---|--------------|--------------|
+| 06 | [Agentic AI and GitHub Copilot Agent Mode](02-agentic/README.md)  | Explore the basic concepts of Agentic AI and how it differs from last-generation GenAI, and explore GitHub Copilot Agent Mode to see what the real0life agentic AI is capable of.
+
+
+### Season 1 - Generative AI (2023 - 2024)
 
 | # | Topics       | Descriptions |
 |---|--------------|--------------|
