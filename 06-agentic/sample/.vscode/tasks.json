@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start static server on 5173",
+			"type": "shell",
+			"command": "python3",
+			"args": [
+				"-m",
+				"http.server",
+				"5173"
+			],
+			"isBackground": true,
+			"group": "build"
+		}
+	]
+}
