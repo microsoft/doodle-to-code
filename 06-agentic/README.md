@@ -1,8 +1,9 @@
-# Intro Agentic AI and Explore GitHub Copilot Agent Mode
+# What is Agentic AI? 
 
-In this section, you'll learn what agentic AI is and does, and explore GitHub Copilot Agent Mode by vibe coding and more!
+*From autocomplete to autonomy, GitHub Copilot is now agentic! Explore **GitHub Copilot Agent Mode** and see what agentic AI can do*
 
-## What is Agentic AI?  
+
+## Intro Agentic AI
 
 In the early days of Generative AI, most systems were **chat-based assistants**. They amazed us with their ability to answer questions, generate text, or create content.  
 
@@ -46,6 +47,8 @@ We’re moving toward a future where AI isn’t just helping us write code—it�
 ---
 
 ## 🚀 Explore GitHub Copilot Agent Mode 
+
+![Vibe coding with GitHub Copilot agent mode](../images/vibe-code.png)
 
 **Now [let's vibe-code to build a game!](sample/README.md)!**
 
