@@ -191,7 +191,8 @@ No matter which path you chose, you should now have a colorful browser Pong game
 
 * 🎮 Invite a friend to play and see who wins!
 * 🛠️ Add new features with Copilot (sounds, scorekeeping, levels).
-* 📤 Like and share [Doodle to Code Github repo](https://aka.ms/doodle-to-code) link so others can try it too.
+* 📤 Star and share [Doodle to Code Github repo](https://aka.ms/doodle-to-code) so others can try this game too.
+* 📚 Take [AI Agents for Beginners Course](https://github.com/microsoft/ai-agents-for-beginners) to dive deeper!
 
 ### 📖 Learn more:
 
