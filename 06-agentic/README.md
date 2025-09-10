@@ -56,6 +56,6 @@ We’re moving toward a future where AI isn’t just helping us write code—it�
 
 Watch the video, **Intro Agentic AI and Vibe code with GitHub Copilot Agent Mode** on YouTube:
 
-[![YouTube: Intro Agentic AI and Vibe code with GitHub Copilot Agent Mode](https://img.youtube.com/vi/xxxxxx/0.jpg)](https://youtu.be/xxxxx)
+[![YouTube: Intro Agentic AI and Vibe code with GitHub Copilot Agent Mode](https://img.youtube.com/vi/Oxn80TAgv7k/0.jpg)](https://youtu.be/Oxn80TAgv7k)
 
 [Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
