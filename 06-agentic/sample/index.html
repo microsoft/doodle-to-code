@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hand-Pong</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Play Pong with your hand using your webcam (MediaPipe Hands)." />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Hand-Pong</h1>
+  <p class="subtitle">Control both paddles with your hands (index finger)</p>
+    </header>
+
+    <main>
+      <div class="stage">
+        <!-- Game Canvas -->
+        <canvas id="game" width="900" height="540" aria-label="Ping Pong Game" role="img"></canvas>
+
+        <!-- Overlay for instructions and status -->
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <h2>Webcam needed</h2>
+            <p>Use your index fingers to move both paddles up/down.</p>
+            <ul>
+              <li>Click Start and grant camera access</li>
+              <li>Keep your hand in view ~30-80 cm from the camera</li>
+              <li>Tip: Move smoothly for best control</li>
+            </ul>
+            <div class="buttons">
+              <button id="startBtn" class="primary">Start</button>
+              <button id="noCamBtn" class="ghost" title="Play with keyboard arrows instead">No Camera (left only)</button>
+            </div>
+            <p class="tiny">Keyboard fallback (left paddle): Up/Down arrows</p>
+          </div>
+        </div>
+
+        <!-- In-canvas camera overlay -->
+        <div id="camOverlay" class="cam-overlay">
+          <canvas id="debugCanvas" width="320" height="180" aria-label="Camera preview with hand landmarks" role="img"></canvas>
+        </div>
+        <!-- Hidden raw video used by MediaPipe input -->
+        <video id="inputVideo" playsinline muted class="hidden"></video>
+      </div>
+
+      <section class="hud">
+        <div>🏓 Score: <span id="scoreLeft">0</span> - <span id="scoreRight">0</span></div>
+        <label class="toggle"><input type="checkbox" id="toggleDebug" checked /> Camera</label>
+        <div id="status"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built with MediaPipe Hands</span>
+    </footer>
+  </div>
+
+  <!-- MediaPipe Hands via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+  <!-- App script (module imports hand-controller.js) -->
+  <script type="module" src="game.js"></script>
+</body>
+</html>
