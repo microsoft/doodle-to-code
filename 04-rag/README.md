@@ -34,3 +34,14 @@ Watch the video, **Use OpenAI Assistants API to build your own cooking advisor b
 [![YouTube: Use OpenAI Assistants API to build your own cooking advisor bot on Teams](https://img.youtube.com/vi/1k4XGgsqfTM/0.jpg)](https://youtu.be/1k4XGgsqfTM?si=909QFuvEcSfwo7rh)
 
 [Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
+
+# 🤿 Dive Deeper!
+
+Once you are familiar with the basics, go deep-dive into the world of Generative AI & RAG!
+
+## Building GenAI Applications with RAG
+
+[**Generative AI for Beginners**](https://github.com/microsoft/generative-ai-for-beginners) is a multi-lingual course for building GenAI apps, and the course includes a lesson for RAG application:
+
+- [**Retrieval Augmented Generation (RAG) and Vector Databases**](https://github.com/microsoft/generative-ai-for-beginners/blob/main/15-rag-and-vector-databases/README.md)
+

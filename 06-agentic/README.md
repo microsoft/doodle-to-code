@@ -14,9 +14,19 @@ Agentic AI doesn’t just answer questions—it can:
 - **Make decisions** in real-world workflows  
 - **Invoke tools and perform multistep tasks** without constant human supervision  
 
-Think of it as moving from “a smart assistant” → to “a problem-solving teammate.”  
+Think of it as moving from **a smart assistan** → to **a problem-solving teammate.**  
 
 ![Agentic AI](../images/agentic-ai.png)
+
+### Agentic AI vs AI Agents
+
+Let's not confuse these terms, although sometimes they are used almost interchangeably. 
+
+**Agentic AI** is a broad concept describing AI *systems* that can act autonomously with goals, decision-making, and the ability to affect their environment, often emphasizing human-like initiative and responsibility.
+
+**AI agents**, on the other hand, are the practical implementations of this idea—software *entities* designed to perceive inputs, reason, and take actions within a specific environment (like a trading bot, customer support assistant, or game character).
+
+In short: Agentic AI is the capability; AI agents are the concrete instances that use it!
 
 ## GitHub Copilot Agent Mode  
 
@@ -59,3 +69,24 @@ Watch the video, **Intro Agentic AI and Vibe code with GitHub Copilot Agent Mode
 [![YouTube: Intro Agentic AI and Vibe code with GitHub Copilot Agent Mode](https://img.youtube.com/vi/Oxn80TAgv7k/0.jpg)](https://youtu.be/Oxn80TAgv7k)
 
 [Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
+
+
+
+# 🤿 Dive Deeper!
+
+Once you are familiar with the basics, go deep-dive into the world of agentic AI and building agents!
+
+## Building Agents
+
+[**AI Agents for Beginners**](https://github.com/microsoft/ai-agents-for-beginners) is a multi-lingual course teaching everything you need to know to start building AI Agents!
+
+The course includes:
+- Agentic frameworks 
+- Design pattern
+- Security
+
+and more!
+
+## Building Microsoft 365 Agents
+
+If you are interested in building enterprise grade AI agents for M365 platform, [**Copilot Developer Camp**](https://microsoft.github.io/copilot-camp/) is for you to learn various types of agents and how to build them!

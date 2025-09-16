@@ -39,3 +39,18 @@ Watch the video, **Generative AI and prompting 101** on YouTube:
 [![YouTube: Generative AI and prompting 101](https://img.youtube.com/vi/PGI6oxbcYDc/0.jpg)](https://youtu.be/PGI6oxbcYDc?si=9AMFTyQFS-BcgFVK)
 
 [Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)! 
+
+# 🤿 Dive Deeper!
+
+Once you are familiar with the basics, go deep-dive into the world of Generative AI!
+
+## Building GenAI Applications
+
+[**Generative AI for Beginners**](https://github.com/microsoft/generative-ai-for-beginners) is a multi-lingual course teaching everything you need to know to start building GenAI apps!
+
+The course includes:
+- In-depth kowledge in Generative AI and LLM 
+- Advanced prompt engineering
+- Security
+
+and more!

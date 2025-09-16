@@ -35,3 +35,6 @@ Learn the fundamentals of Generative AI, agentic AI, agents, and related technol
 | s01e03 | [OpenAI Assistants API](03-assistants-api/README.md) | Learn OpenAI Assistants API and build your own cooking advisor bot on Teams. |
 | s01e04 | [Intro to Retrieval-Augmented Generation (RAG)](04-rag/README.md)  | Import your custom data using Azure AI Search and build a RAG-based AI assistant in Python using Teams Toolkit. |
 | s01e05 | [Deploy to a Teams app using Azure OpenAI Studio](05-on-your-data/README.md) | Bring your AI app to Teams using Azure OpenAI Studio's 'Deploy to a Teams App' feature. |
+
+## Doodle to Code on YouTube
+[![Subscribe us on YouTube](images/subscribe-us-youtube.png)](https://www.youtube.com/playlist?list=PLWZJrkeLOrbYS_1Av5hiPilrtCfe7R1Eo)
