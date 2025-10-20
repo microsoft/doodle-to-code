@@ -1,0 +1,80 @@
+{
+  "name": "tabs-demo",
+  "root": {
+    "type": "tabs",
+    "props": {
+      "activeTabId": "overview",
+      "tabs": [
+        {
+          "id": "overview",
+          "label": "Overview",
+          "content": {
+            "type": "column",
+            "props": {
+              "gap": 12
+            },
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "value": "Tabs help organize UI into sections.",
+                  "variant": "heading"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "value": "Each tab can render any sketch node, including nested layouts."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "details",
+          "label": "Details",
+          "content": {
+            "type": "card",
+            "props": {
+              "title": "Details Card",
+              "description": "Cards can appear inside tabs as well."
+            },
+            "children": [
+              {
+                "type": "button",
+                "props": {
+                  "label": "Learn more",
+                  "variant": "secondary"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "cta",
+          "label": "Call to Action",
+          "content": {
+            "type": "column",
+            "props": {
+              "gap": 10
+            },
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "value": "Ready to extend the parser?"
+                }
+              },
+              {
+                "type": "button",
+                "props": {
+                  "label": "Open Docs"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
