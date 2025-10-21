@@ -3,7 +3,7 @@ import './App.css'
 import { parseSketch, SketchParserError } from '@parser'
 import type { Sketch } from '@parser'
 import { VisionAnalyzer, SchemaEditor, CodeExporter } from '@components'
-import type { VisionAnalysisResult } from '@services'
+import type { VisionAnalysisResult, UIElement } from '@services'
 import { SketchConverter } from './services/sketchConverter'
 import { EditableProvider } from './contexts/EditableContext'
 
@@ -29,27 +29,56 @@ function App() {
     }
   }, [visionResult])
 
+  const analysisElements = useMemo(() => {
+    if (!visionResult) return []
+
+    const flattenElements = (elements: UIElement[]): UIElement[] => {
+      return elements.reduce<UIElement[]>((acc, element) => {
+        acc.push(element)
+        if (element.children?.length) {
+          acc.push(...flattenElements(element.children))
+        }
+        return acc
+      }, [])
+    }
+
+    return flattenElements(visionResult.elements)
+  }, [visionResult])
+
   const schemaWithTextEdits = useMemo(() => {
     const baseSchema = editedSchema || convertedSketch?.sketch
     if (!baseSchema || Object.keys(editedTextValues).length === 0) return baseSchema
     const updated = JSON.parse(JSON.stringify(baseSchema))
     const updateTextInNodes = (nodes: unknown[]): void => {
       if (!Array.isArray(nodes)) return
-      nodes.forEach((node: any) => {
-        if (node && typeof node === 'object') {
-          if (node.type === 'text' && node.id) {
-            const editId = `text-${node.id}`
-            if (editedTextValues[editId]) {
-              node.props = node.props || {}
-              node.props.value = editedTextValues[editId]
-            }
+
+      type MutableSketchNode = {
+        type?: string
+        id?: string
+        props?: Record<string, unknown>
+        children?: unknown[]
+        items?: Array<{ node?: unknown }>
+      }
+
+      nodes.forEach(node => {
+        if (!node || typeof node !== 'object') return
+        const sketchNode = node as MutableSketchNode
+
+        if (sketchNode.type === 'text' && typeof sketchNode.id === 'string') {
+          const editId = `text-${sketchNode.id}`
+          const editedValue = editedTextValues[editId]
+          if (editedValue) {
+            if (!sketchNode.props) sketchNode.props = {}
+            sketchNode.props.value = editedValue
           }
-          if (Array.isArray(node.children)) updateTextInNodes(node.children)
-          if (node.type === 'grid' && Array.isArray(node.items)) {
-            node.items.forEach((item: any) => {
-              if (item && item.node) updateTextInNodes([item.node])
-            })
-          }
+        }
+
+        if (Array.isArray(sketchNode.children)) updateTextInNodes(sketchNode.children)
+
+        if (sketchNode.type === 'grid' && Array.isArray(sketchNode.items)) {
+          sketchNode.items.forEach(item => {
+            if (item?.node) updateTextInNodes([item.node])
+          })
         }
       })
     }
@@ -70,6 +99,14 @@ function App() {
       return { element: null, error: new SketchParserError('Failed to parse sketch') }
     }
   }, [schemaWithTextEdits])
+
+  const analysisWarnings = useMemo(() => {
+    const warnings: string[] = []
+    if (visionResult?.errors?.length) warnings.push(...visionResult.errors)
+    if (convertedSketch?.warnings?.length) warnings.push(...convertedSketch.warnings)
+    if (aiParseError) warnings.push(`Parser warning: ${aiParseError.message}`)
+    return warnings
+  }, [visionResult, convertedSketch, aiParseError])
 
   const handleVisionAnalysis = useCallback((result: VisionAnalysisResult) => {
     setVisionResult(result)
@@ -129,6 +166,48 @@ function App() {
           <div className="app__upload-note app__upload-note--error">
             <p><strong>❌ Conversion Failed:</strong> {conversionError.message}</p>
           </div>
+        )}
+
+        {visionResult && (
+          <details className="app__ai-output">
+            <summary>View AI Analysis Output</summary>
+            <div className="app__ai-output-content">
+              <h4>Analysis Overview</h4>
+              <p><strong>Overall Confidence:</strong> {Math.round((visionResult.confidence ?? 0) * 100)}%</p>
+              <p><strong>Total Elements Detected:</strong> {analysisElements.length}</p>
+
+              <h5>Detected Elements</h5>
+              <div className="app__elements-list">
+                {analysisElements.map((element, index) => {
+                  const textContent = element.properties.text || element.properties.title || element.properties.description
+                  return (
+                    <div className="app__element-item" key={`analysis-element-${index}`}>
+                      <strong>{element.type}</strong>
+                      {textContent && (
+                        <p>Text: {textContent}</p>
+                      )}
+                      <div className="app__element-bounds">
+                        Position: x {element.bounds.x.toFixed(1)}%, y {element.bounds.y.toFixed(1)}%
+                        {' '}| Size: w {element.bounds.width.toFixed(1)}%, h {element.bounds.height.toFixed(1)}%
+                      </div>
+                      <div className="app__element-confidence">Confidence: {Math.round(element.confidence * 100)}%</div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {analysisWarnings.length > 0 && (
+                <div className="analysis-warnings">
+                  <h5>Warnings &amp; Notes</h5>
+                  <ul>
+                    {analysisWarnings.map((warning, index) => (
+                      <li key={`analysis-warning-${index}`}>{warning}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </details>
         )}
       </section>
 
