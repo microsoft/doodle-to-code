@@ -1,190 +1,132 @@
-# Multimodal + Multimodel AI Demo
+# AI Decision Engine Explorer
 
-A practical demo showing how MULTIMODAL inputs and MULTIMODEL architecture work together. Upload a Japanese menu image with a question and watch three specialized AI models collaborate to answer it.
+**Explore how AI combines multimodal inputs and multimodel processing to solve real-world problems.** This app demonstrates how AI systems analyze diverse inputs like images, audio, text and select the best models for each task to deliver accurate results. For example, upload a photo of a menu and ask, "What are the vegetarian options?", the app will detect text in the image, translate it if needed, and reason through the content to provide an answer.
 
-## What This Demonstrates
+You can upload an image, audio, or text and pose a question to see how the app analyzes each input type individually, selects the best models for the task, and orchestrates them to provide a comprehensive and accurate response.
 
-This demo clarifies two concepts that sound similar but mean different things:
+## 🌟 Why This App Matters
 
-**MULTIMODAL** = Using different types of input data (image + text, audio + text, etc.)
+In the world of AI, the synergy between two key concepts—**Multimodal** and **Multimodel**—is transformative:
 
-**MULTIMODEL** = Using multiple specialized AI models in sequence or parallel
+- **Multimodal**: By combining different input types (e.g., text, images, audio), AI systems can process information holistically, capturing the richness of real-world data. For example, the app can analyze an image of a menu and a text-based question together to provide a meaningful answer.
+- **Multimodel**: Leveraging multiple specialized AI models ensures that each task is handled by the most capable model, leading to more accurate and reliable outcomes. For instance, text recognition, translation, and reasoning are performed by different models, each optimized for its specific task.
 
-Most AI applications need both concepts working together.
+When used together, these concepts transform how AI systems operate. By combining diverse data types and selecting the most suitable model for each task, AI can tackle complex, real-world scenarios with a nuanced understanding. This synergy creates systems that are not only more robust but also better equipped to handle the challenges of diverse and dynamic environments.
 
-## Real Example: Japanese Menu Translation
+## 🚀 Quick Start
 
-Upload a photo of a Japanese restaurant menu and ask "anything gluten free?"
+### 1. Requirements
 
-The system:
-1. **Detects multimodal input** - Image (menu photo) + Text (your question)
-2. **Selects three specialized models**:
-   - Llama 4 Maverick (Meta) - Extracts Japanese text from image
-   - Cohere Command R+ - Translates Japanese to English
-   - DeepSeek R1 - Answers your question based on translated menu
-3. **Chains outputs** - Each model passes results to the next one
+Ensure you have the following installed and ready:
 
-This shows why both concepts matter: handling different input types (multimodal) AND using the right model for each task (multimodel).
+- **Node.js**: Version 18 or higher
+- **Credentials**: Either a GitHub Personal Access Token or Azure OpenAI credentials
 
-## Architecture
+### 2. Installation
 
-The app has two main parts:
+Follow these steps to set up the app:
 
-**Frontend** (Next.js + TypeScript)
-- Upload component for images
-- Two visualization boxes showing MULTIMODAL and MULTIMODEL concepts
-- Pipeline display showing each model's output
+1. Clone the repository:
 
-**Backend** (TypeScript + GitHub Models API)
-- Decision engine that analyzes input type
-- Model orchestration that chains three models
-- Streaming responses for real-time updates
+   ```bash
+   git clone https://github.com/microsoft/doodle-to-code.git
+   ```
 
-**Models Used**:
-- Llama 4 Maverick 17B (Meta) - Vision and OCR
-- Cohere Command R+ - Translation (100+ languages)
-- DeepSeek R1 - Reasoning and question answering
-- Phi-4 Multimodal (Microsoft) - Backup for vision tasks
+2. Navigate to the project directory:
 
-All models accessed via GitHub Models API (free tier available).
+   ```bash
+   cd doodle-to-code/08-multimodal-multimodel/sample
+   ```
 
-## Setup
+3. Install dependencies:
 
-### Requirements
+   ```bash
+   npm install
+   ```
 
-- Node.js 18+
-- GitHub Personal Access Token (for GitHub Models API)
+4. Copy the example environment file:
 
-### Installation
+   ```bash
+   cp .env.local.example .env.local
+   ```
 
-1. Clone and install:
-```bash
-npm install
+### 3. Configuration
+
+Set up your environment variables based on your preferred model provider:
+
+#### GitHub Models (Free Tier)
+
+Add the following to your `.env.local` file:
+
+```env
+GITHUB_TOKEN=your_github_token
+MODEL_ENDPOINT=https://models.inference.ai.azure.com
 ```
 
-2. Set up environment variables:
-```bash
-cp .env.local.example .env.local
+#### Azure OpenAI
+
+Add the following to your `.env.local` file:
+
+```env
+AZURE_OPENAI_API_KEY=your_key
+AZURE_OPENAI_ENDPOINT=your_endpoint
+MODEL_ENDPOINT=your_endpoint
 ```
 
-Edit `.env.local`:
-```
-GITHUB_TOKEN=your_github_token_here
+#### Model Names (Required)
+
+Specify the models to use in your `.env.local` file:
+
+```env
 PHI4_MULTIMODAL_MODEL=Phi-4-multimodal-instruct
 LLAMA4_MAVERICK_MODEL=Llama-4-Maverick-17B-128E-Instruct-FP8
 COHERE_MODEL=Cohere-command-r-plus-08-2024
 DEEPSEEK_MODEL=DeepSeek-R1-0528
-PHI4_REASONING_MODEL=Phi-4-reasoning-plus
+PHI_REASONING_MODEL=Phi-4-reasoning
 ```
 
-3. Run the dev server:
+### 4. Run the App
+
+Start the development server:
+
 ```bash
 npm run dev
 ```
 
-4. Open http://localhost:3001
+Access the app in your browser at:
 
-### Getting a GitHub Token
+[http://localhost:3001](http://localhost:3001)
 
-1. Go to https://github.com/settings/tokens
-2. Generate new token (classic)
-3. Select scope: `read:packages`
-4. Copy token to `.env.local`
+## 🧠 How It Works
 
-## How It Works
+The app employs a tiered router-based architecture to handle multimodal and multimodel tasks:
 
-**Step 1: Input Detection**
-- System checks what input types you provided
-- Detects: Image, Text, or both
-- Displays results in MULTIMODAL box
+1. **Decision Engine**: Detects input types, decomposes tasks, selects models, and orchestrates their execution. It ensures that the right models are chosen for each task, optimizing for accuracy and efficiency.
+2. **Decision Viewer**: Visualizes the decision-making process, showing how inputs are processed and models interact. This transparency helps users understand the reasoning behind each decision.
+3. **API Endpoint**: Manages uploads and streams results back to the client in real-time, providing a seamless user experience.
 
-**Step 2: Model Selection**
-- Based on input type, system chooses specialized models
-- For IMAGE_WITH_TEXT: Llama → Cohere → DeepSeek
-- Displays selected models in MULTIMODEL box
+## 📂 Project Structure
 
-**Step 3: Pipeline Execution**
-- Models run sequentially:
-  - Llama extracts Japanese text from image
-  - Cohere translates Japanese to English
-  - DeepSeek answers your question using translated menu
-- Each model only gets what it needs:
-  - First model: Gets original image
-  - Middle models: Get previous model's output
-  - Last model: Gets previous output + your question
+The project is organized as follows:
 
-**Step 4: Results**
-- See each model's individual output
-- Final answer appears at the bottom
-- Performance stats: time (~20s) and cost (~$0.01)
-
-## Project Structure
-
-```
-├── src/
-│   ├── app/
-│   │   ├── api/upload/stream/   # Streaming upload endpoint
-│   │   └── page.tsx              # Main demo page
-│   ├── components/
-│   │   ├── DecisionViewer.tsx   # Shows MULTIMODAL + MULTIMODEL
-│   │   └── UploadComponent.tsx  # File upload UI
-│   ├── lib/
-│   │   └── decision-engine.ts   # Model selection and pipeline logic
-│   └── types/
-│       └── index.ts              # TypeScript types
-├── .env.local                    # API keys (not in git)
-└── VIDEO_RECORDING_GUIDE.md      # Guide for recording demo
+```plaintext
+src/
+├── app/
+│   ├── api/upload/stream/     # Streaming API that orchestrates execution
+│   └── page.tsx                # Main UI with upload + visualizations
+├── components/
+│   ├── DecisionViewer.tsx     # Renders multimodal/multimodel boxes + pipeline
+│   └── UploadComponent.tsx    # Handles file upload + streaming events
+└── lib/
+    ├── decision-engine.ts     # Core router logic (1041 lines of orchestration)
+    ├── config.ts              # Environment configuration
+    └── types/                 # TypeScript definitions
 ```
 
-## Key Files
+## 📖 Learn More
 
-**decision-engine.ts** - Core logic
-- `analyzeStreaming()` - Detects input modality
-- `selectModels()` - Chooses which models to use
-- `executeModel()` - Runs individual models
-- Pipeline flow at lines 920-935
+Explore these resources to deepen your understanding:
 
-**DecisionViewer.tsx** - UI components
-- MULTIMODAL box (shows detected inputs)
-- MULTIMODEL box (shows selected models)
-- Pipeline display (shows execution flow)
-
-## Performance
-
-Typical request:
-- **Time**: ~20 seconds
-- **Cost**: < $0.01 (using GitHub Models free tier)
-- **Models**: 3 different providers (Meta, Cohere, DeepSeek)
-- **Token usage**: ~750 tokens total
-
-## Why This Approach?
-
-**Specialization** - Each model does what it's best at:
-- Vision models for OCR
-- Translation models for languages
-- Reasoning models for question answering
-
-**Transparency** - You see exactly what each model contributes
-
-**Cost efficiency** - Only pay for what you need (each model runs once)
-
-**Flexibility** - Easy to swap models or add new ones
-
-## Limitations
-
-- Image size: Keep under 500KB for fast processing
-- Language support: Currently optimized for Japanese menus
-- Model availability: Requires GitHub Models API access
-- Temperature settings: Fixed at 0.3-0.7 (not configurable in UI)
-- Token limits: 250 tokens per model (may truncate long outputs)
-
-## Learn More
-
-- [GitHub Models](https://github.com/marketplace/models) - Free AI model access
-- [Llama 4 Maverick](https://ai.meta.com/llama/) - Vision model from Meta
-- [Cohere Command R+](https://cohere.com/command) - Translation model
-- [DeepSeek R1](https://www.deepseek.com/) - Reasoning model
-
-## License
-
-MIT
+- [GitHub Models](https://github.com/marketplace/models) — Multi-provider AI model API
+- [Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service) — Enterprise AI platform
+- [Router Pattern](https://www.anthropic.com/research/building-effective-agents) — Architectural pattern for AI systems
