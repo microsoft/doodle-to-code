@@ -23,7 +23,8 @@ Learn the fundamentals of Generative AI, agentic AI, agents, and related technol
 
 | # | Topics       | Descriptions |
 |---|--------------|--------------|
-| s02e01 | [Agentic AI and GitHub Copilot Agent Mode](06-agentic/README.md)  | Explore the basic concepts of Agentic AI and how it differs from last-generation GenAI, and explore GitHub Copilot Agent Mode to see what the real-life agentic AI is capable of.
+| s02e01 | [Agentic AI and GitHub Copilot Agent Mode](06-agentic/README.md)  | Explore the basic concepts of Agentic AI and how it differs from last-generation GenAI, and explore GitHub Copilot Agent Mode to see what the real-life agentic AI is capable of. |
+| s02e02 | [MCP](07-mcp/README.md)  | Learn what MCP is and what it does. And start building AI apps that communicate with different tools and services. |
 
 
 ### Season 1 - Generative AI (2023 - 2024)
