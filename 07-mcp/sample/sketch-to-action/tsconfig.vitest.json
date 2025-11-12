@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "paths": {
+      "@components": ["./src/components/index.ts"],
+      "@parser": ["./src/parser/index.ts"],
+      "@components/*": ["./src/components/*"],
+      "@parser/*": ["./src/parser/*"],
+      "@samples/*": ["./samples/*"]
+    }
+  },
+  "include": ["src", "tests"]
+}

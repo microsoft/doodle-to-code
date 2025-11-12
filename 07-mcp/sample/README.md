@@ -75,3 +75,7 @@ You can also view the changes on GitHub:
 ```
 What is the branch link?
 ```
+
+## Test Sketch to Action App
+
+You can also try the Sketch to Action app that uses MCP servers to implement the design in Figma to code in GitHub repo. Follow the instruction in the [Sketch to Action README](../sample/sketch-to-action/README.md) to test it out!
