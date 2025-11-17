@@ -97,6 +97,8 @@ Access the app in your browser at:
 
 [http://localhost:3001](http://localhost:3001)
 
+Download [this Japanese diner menu](../../images/contoso-lunch.png) and try with the app!
+
 ## 🧠 How It Works
 
 The app employs a tiered router-based architecture to handle multimodal and multimodel tasks:
