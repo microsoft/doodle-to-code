@@ -1,15 +1,19 @@
 # 🧠 Multimodal and Multimodel in AI
 
 Let's learn about two concepts you'll hear a lot in modern AI — **multimodal** and **multi-model**.
-They sound almost the same, but they work in very different ways.
+They sound almost the same, so let's not get confused!
 
 ![Multimodal and Multi-model AI](../images/multimodal-multimodel.png)
 
-## 🧿 What Is Multimodality?
+## 🧿 Multimodal
+
+### What Is Multimodality?
 
 **Multimodality** means an AI model can understand and generate *multiple types of data* and combine them to reason about the world.
 
-A **multimodal model** is a *single AI model* that works across:
+### Multimodal model
+
+When you hear a **multimodal model**, it means a *single AI model* that works across:
 
 - 📝 Text  
 - 🖼️ Images  
@@ -27,8 +31,9 @@ The model can read an image, interpret the text inside it, listen to accompanyin
 - Apps where you want **one model** and minimal engineering overhead  
 - Fast prototyping or lightweight workflows
 
+## 👯 Multi-model 
 
-## 👯 What Is the Multi-model Approach?
+## What Is the Multi-model Approach?
 
 A **multimodel** system uses **multiple specialized AI models**, each designed for a specific task.
 
@@ -98,10 +103,10 @@ The app orchestrates three specialized models, each doing what it's best at:
 
 **Now [Try the Example App by Yourself](sample/README.md)!**
 
-## 📺 Watch on YouTube - Will be available soon!
+## 📺 Watch on YouTube
 
 Watch the video, **Multimodal and Multi-model AI** on YouTube:
 
-[![YouTube: Multimodal and Multi-model AI](https://img.youtube.com/vi/0000/0.jpg)](https://www.youtube.com/watch?v=0000)
+[![YouTube: Multimodal and Multi-model AI](https://img.youtube.com/vi/zkZYeYvBy60/0.jpg)]([https://www.youtube.com/watch?v=zkZYeYvBy60](https://www.youtube.com/watch?v=zkZYeYvBy60))
 
 [Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
