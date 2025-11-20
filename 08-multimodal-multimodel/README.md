@@ -3,17 +3,17 @@
 Let's learn about two concepts you'll hear a lot in modern AI — **multimodal** and **multi-model**.
 They sound almost the same, so let's not get confused!
 
-![Multimodal and Multi-model AI](../images/multimodal-multimodel.png)
+![Multimodal and Multi-model AI](../images/sketchnote-multimodal-multimodel.png)
 
 ## 🧿 Multimodal
 
 ### What Is Multimodality?
 
-**Multimodality** means an AI model can understand and generate *multiple types of data* and combine them to reason about the world.
+**Multimodality** means an AI system can understand and generate *multiple types of data* and combine them to reason about the world.
 
-### Multimodal model
+### Multimodal Model
 
-When you hear a **multimodal model**, it means a *single AI model* that works across:
+A **multimodal model** is a *single AI model* that works across:
 
 - 📝 Text  
 - 🖼️ Images  
@@ -22,8 +22,7 @@ When you hear a **multimodal model**, it means a *single AI model* that works ac
 - 💻 Code  
 etc.
 
-Think of it as **one brain with multiple senses** — all working together.  
-The model can read an image, interpret the text inside it, listen to accompanying audio, and respond in natural language, all in one flow.
+Think of it as **one brain with multiple senses** — all working together. The model can read an image, interpret the text inside it, listen to accompanying audio, and respond in natural language, all in one flow.
 
 ### When multimodal model approaches shine
 - Simple, end-to-end tasks  
@@ -33,9 +32,9 @@ The model can read an image, interpret the text inside it, listen to accompanyin
 
 ## 👯 Multi-model 
 
-## What Is the Multi-model Approach?
+### What Is the Multi-model Approach?
 
-A **multimodel** system uses **multiple specialized AI models**, each designed for a specific task.
+A **multimodel** system uses *multiple specialized AI models*, each designed for a specific task.
 
 Examples:
 - 👁️ A vision model for image understanding  
@@ -69,7 +68,7 @@ This is like having a **team of experts**, each doing what they're best at.
 - ❌ Requires more engineering  
 - ❌ More points of failure  
 
-## 🧜‍♀️ Hybrid Approaches (Often the Sweet Spot)
+**Hybrid Approaches** (Often the Sweet Spot 🧜‍♀️ )
 
 In many real applications, you'll mix both:
 
@@ -79,19 +78,23 @@ In many real applications, you'll mix both:
 This gives you a balance of accuracy, cost efficiency, and flexibility.
 
 
-## 🧪 Example in the video: Multi-model Approach
+## 🧪 Example in the video
 
-**Scenario:**
-You're traveling in Japan, sitting at a restaurant for lunch.
-You take a photo of the menu and ask your app:
+**👩 User scenario:**
 
-> "Can you suggest gluten-free meals from this menu?"
+A user is traveling. In this case, Japan, and sitting at a local diner for lunch. They don't have a munu in English, so the user takes a photo of the menu, uploads it to the AI-powered app, then asks:
+
+> 👩 "Can you suggest gluten-free meals from this menu?"
 
 ![Diner in Japan](../images/japan-diner.png)
 
-**How the app handles it:**
+The app suggests *Yasai-itame teishoku* (stir-fried vegetable set) from the menu.
 
-The app orchestrates three specialized models, each doing what it's best at:
+**📱 App scenario:**
+
+The app needs to handle multimodality. 
+
+In this case, the app orchestrates three specialized models, each doing what it's best at:
 
 1. **OCR Model** extracts the text from the menu image — including Japanese characters, prices, dish names, and descriptions.
 1. **Translation Model** translates the extracted text into English (or the user's preferred language) with high linguistic accuracy.
@@ -107,6 +110,7 @@ The app orchestrates three specialized models, each doing what it's best at:
 
 Watch the video, **Multimodal and Multi-model AI** on YouTube:
 
-[![YouTube: Multimodal and Multi-model AI](https://img.youtube.com/vi/zkZYeYvBy60/0.jpg)]([https://www.youtube.com/watch?v=zkZYeYvBy60](https://www.youtube.com/watch?v=zkZYeYvBy60))
+[![YouTube: Multimodal and Multi-model AI](https://img.youtube.com/vi/zkZYeYvBy60/0.jpg)](https://www.youtube.com/watch?v=zkZYeYvBy60)
+https://youtu.be/zkZYeYvBy60
 
-[Subscribe us!](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
+✅ [**Subscribe us!**](https://www.youtube.com/channel/UCV_6HOhwxYLXAGd-JOqKPoQ?sub_confirmation=1)
